@@ -2,9 +2,9 @@
 # To build with Java 17, pass "--config java_17" to "bazel build"
 # To set a different default Java version, add one of the following to
 # user.bazelrc:
-build --config java_17
+#build --config java_17
 #build --nolegacy_bazel_java_test
-build --tool_java_runtime_version=remotejdk_17
+#build --tool_java_runtime_version=remotejdk_17
 build:java_17 --java_language_version=17 --java_runtime_version=remotejdk_17
 
 # Default to Java/JRE 8
@@ -18,3 +18,4 @@ build:java_17 --java_language_version=17 --java_runtime_version=remotejdk_17
 # can be overridden on CI/CD agents.
 #build --local_resources=memory="HOST_RAM*0.5"
 #build --local_resources=cpu="HOST_CPUS*0.5"
+~

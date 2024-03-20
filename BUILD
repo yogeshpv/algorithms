@@ -1,9 +1,12 @@
-load("@rules_java//java:defs.bzl", "java_binary")
-package(default_visibility = ["//visibility:public"])
 
 java_binary(
-    name = "Algorithms",
-    srcs = glob(["src/main/java/com/code/*.java"]),
-    main_class = "src.main.java.com.code.ProjectRunner",
+    name = "algo_app",
+    main_class = "src.main.java.com.code.ProjectRunnerApplication",
+    srcs = glob(['src/**/*.java']),
+    deps = [
+      '@maven//:org_springframework_boot_spring_boot',
+      '@maven//:org_springframework_boot_spring_boot_autoconfigure',
+      '@maven//:org_springframework_boot_spring_boot_starter_web',
+      '@maven//:org_springframework_spring_web'
+    ],
 )
-
